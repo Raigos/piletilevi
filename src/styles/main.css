@@ -1,0 +1,13 @@
+/*
+* Contains all the foundational, reusable styles that don't target specific components
+* These styles should work regardless of what components are in use
+*/
+
+/* Normalizes browser defaults */
+@import './reset.css';
+
+/* Global CSS variables */
+@import './variables.css';
+
+/* :root settings, rem base, etc. */
+@import './index.css';
