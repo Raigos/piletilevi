@@ -14,9 +14,28 @@ import { modalStyles } from './style'
 
 const DiscountModal = ({ open, handleClose }) => {
   const [appliesTo, setAppliesTo] = React.useState('')
+  const [discountName, setDiscountName] = React.useState('')
 
   const handleChange = event => {
     setAppliesTo(event.target.value)
+  }
+
+  const handleNameChange = event => {
+    setDiscountName(event.target.value)
+  }
+
+  const handleSubmit = event => {
+    event.preventDefault()
+
+    window.alert(
+      `Form submission received!\n\n` +
+        `Discount Name: ${discountName || 'Not provided'}\n` +
+        `Applies To: ${appliesTo || 'Not selected'}\n\n` +
+        `Note: This is a demonstration. The form submission functionality is not implemented, but your request has been properly received by the system.`,
+    )
+    setDiscountName('')
+    setAppliesTo('')
+    handleClose()
   }
 
   return (
@@ -47,6 +66,7 @@ const DiscountModal = ({ open, handleClose }) => {
         <Box
           sx={modalStyles.formStyle}
           component="form"
+          onSubmit={handleSubmit}
         >
           <TextField
             fullWidth
@@ -55,6 +75,8 @@ const DiscountModal = ({ open, handleClose }) => {
             size="small"
             aria-label="Enter discount name"
             required
+            value={discountName}
+            onChange={handleNameChange}
           />
           <Box sx={modalStyles.row}>
             <DropdownMenu
