@@ -117,7 +117,7 @@ export default function Header() {
                   endIcon={<KeyboardArrowDownIcon />}
                   onClick={e => setUserAnchor(e.currentTarget)}
                 >
-                  Noorsooteatear
+                  Noorsooteater
                 </Button>
                 <Menu
                   anchorEl={userAnchor}
@@ -215,7 +215,7 @@ export default function Header() {
                   <ListItem sx={{ marginTop: 'auto' }}>
                     <ListItemText
                       primary="Name Surname"
-                      secondary="Noorsooteatear"
+                      secondary="Noorsooteaterr"
                     />
                   </ListItem>
                 </List>
