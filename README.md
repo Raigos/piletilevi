@@ -20,10 +20,15 @@ Visit the live application at: [https://piletilevi.vercel.app](https://piletilev
 ## 🛠️ Implementation Details
 
 ### Technology Stack
-- React 18 (Create React App)
+- React 18
 - Material-UI v6 for components
 - Emotion for styling
 - React Testing Library
+
+### Search Functionality
+- Current implementation: Search executes when clicking the search button
+- Alternative implementation available: Real-time search updates as user types (commented in code)
+- Both search patterns supported for flexibility in user experience
 
 ### Additional Features
 - Custom mobile-responsive design (not part of original requirements)
